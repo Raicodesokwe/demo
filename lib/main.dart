@@ -2,13 +2,18 @@ import 'package:demoapp/api/api_repository.dart';
 
 import 'package:demoapp/pages/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'data/currency_bloc_cubit.dart';
 import 'data/from_currency_cubit.dart';
 import 'data/to_currency_cubit.dart';
 
-void main() {
+void main() async {
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
+  ]);
   runApp(const MyApp());
 }
 

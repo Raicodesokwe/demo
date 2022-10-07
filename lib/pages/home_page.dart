@@ -49,9 +49,10 @@ class _HomePageState extends State<HomePage> {
                 'Currency\nConverter',
                 style: TextStyle(fontSize: 35),
               ),
-            SizedBox(
-              height: size.height * 0.1,
-            ),
+            if (!isKeyboard)
+              SizedBox(
+                height: size.height * 0.1,
+              ),
             Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
                 padding:
